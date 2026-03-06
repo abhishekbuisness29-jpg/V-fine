@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFine Herbal - Conditioners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Vfine_Img/logo/Favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Active Page Button */
+        .nav-links a.active {
+            background-color: #c17b5c;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        body {
+            background: #fffaf5;
+            color: #2d2d2d;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #c17b5c, #a55d4a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .logo-container {
+            height: auto !important;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4a4a;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .phone-tab {
+            background: #c17b5c;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            color: white !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #c17b5c;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Vfine_Img/Img/Conditioner Official Page.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Products Section - Left Image Right Content Layout */
+        .products-section {
+            padding: 2rem 5% 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2d2d2d;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .product-row {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(193, 123, 92, 0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #c17b5c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 2;
+        }
+
+        .product-image-col {
+            flex: 1;
+            min-height: 350px;
+            overflow: hidden;
+        }
+
+        .product-image-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-row:hover .product-image-col img {
+            transform: scale(1.05);
+        }
+
+        .product-content-col {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-category {
+            color: #c17b5c;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-content-col h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2d2d2d;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tag {
+            background: #f0e6e0;
+            color: #c17b5c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #c17b5c;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            flex: 1;
+            background: #c17b5c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: #a55d4a;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #c17b5c;
+            border: 2px solid #c17b5c;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-secondary:hover {
+            background: #c17b5c;
+            color: white;
+        }
+
+        /* Alternate row layout - image right, content left */
+        .product-row.alt-layout .product-image-col {
+            order: 2;
+        }
+
+        .product-row.alt-layout .product-content-col {
+            order: 1;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: #f5e9e2;
+            padding: 4rem 5%;
+            margin-top: 2rem;
+        }
+
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: #c17b5c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 0.8rem;
+            color: #2d2d2d;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e2a2a;
+            color: white;
+            padding: 4rem 5% 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #c17b5c;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #b0b0b0;
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .footer-col i {
+            margin-right: 10px;
+            color: #c17b5c;
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid #333;
+            color: #b0b0b0;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                height: 200px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .product-row {
+                flex-direction: column;
+            }
+
+            .product-row.alt-layout {
+                flex-direction: column;
+            }
+
+            .product-row.alt-layout .product-image-col {
+                order: 1;
+            }
+
+            .product-row.alt-layout .product-content-col {
+                order: 2;
+            }
+
+            .product-image-col {
+                min-height: 250px;
+            }
+
+            .product-content-col {
+                padding: 1.8rem;
+            }
+
+            .product-content-col h3 {
+                font-size: 1.5rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+        }
+              /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            margin: 0;
+        }
+
+        .social-links a:hover {
+            color: white;
+            transform: translateY(-8px) scale(1.1);
+            border-color: transparent;
+        }
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Bottom distance */
+    right: 20px; /* Right distance */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* WhatsApp logo style */
+  .whatsapp-button img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* Hover effect */
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1); /* Slight scale-up on hover */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+    }
+  
+    .whatsapp-button img {
+        width: 30px;
+        height: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+        bottom: 1.5rem;
+    }
+  
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+  }
+
+  /* Index */
+
+.call-button {
+position: fixed;
+bottom: 6.5rem; /* Bottom distance */
+right: 20px; /* Right distance */
+width: 60px; /* Default width */
+height: 60px; /* Default height */
+background-color: #5270FF;
+border-radius: 50%;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.3s ease-in-out;
+}
+
+.call-button img {
+width: 50%; /* Image size */
+height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Media query for tablets */
+@media (max-width: 1023px) and (min-width: 768px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 60px; /* Default width */
+    height: 60px; /* Default height */
+    bottom: 6rem; /* Adjust bottom position */
+    right: 20px;
+}
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 50px; /* Further reduced size for mobile */
+    height: 50px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 3% !important;
+}
+
+.call-button .images {
+    width: 40px !important;
+    height: 30px !important;
+}
+}
+/* Media query for extra-small mobile devices */
+@media (max-width: 480px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 4% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 424px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 337px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 330px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 6.5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Our Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="tel:8146002890" class="phone-tab">
+                <i class="fas fa-phone-alt"></i>
+                <span>8146002890</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div>
+            <h1>Conditioners</h1>
+            <p>Nourish your hair with nature's finest ingredients</p>
+        </div>
+    </div>
+
+    <!-- Products Section - Left Image Right Content Layout -->
+    <section class="products-section">
+        <div class="section-title">
+            <!-- <h2>Our Premium Conditioners</h2> -->
+            <p>Discover our range of herbal conditioners made with natural ingredients for healthy, beautiful hair</p>
+        </div>
+
+        <div class="products-container">
+            <!-- Product 1 - Image Left, Content Right -->
+            <div class="product-row">
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image-col">
+                    <img src="Vfine_Img/Conditioner/Conditioner Green tea and aloevera.png" alt="Hair Conditioner">
+                </div>
+                <div class="product-content-col">
+                    <div class="product-category">Hair Conditioner </div>
+                    <h3>Green Tea And Aloevera</h3>
+                    <p class="product-description">Hair Conditioner is an antioxidant conditioner that leaves your hair
+                        soft and shiny. It protects hair from damaging effects of direct sunlight</p>
+                    <p style="font-weight: bolder;" class="product-description">Key Ingredients:</p>
+                    <p class="product-description">Green Tea Extract, Aloevera Extract, Shea Butter, Vitamin E,
+                        Glycerine & Conditioner Base Q.S, ColorGreen 3(C.I.No. 42053) And Perfume</p>
+                    <p style="font-weight: bolder;" class="product-description">Instruction Of Use:</p>
+                    <p class="product-description">Apply Conditioner On Your Hair After Using Shampoo.</p>
+                    <p class="product-description">Leave It For 5 Minutes And Rinse.</p>
+                    <p style="font-weight: bolder;" class="product-description">Mfg. Lic. No.</p>
+                    <p class="product-description">HP-302-AY</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Hair Brightening</span>
+                        <span class="feature-tag">Paraben-free</span>
+                        <span class="feature-tag">For All Hair</span>
+                    </div>
+                    <div class="product-price">₹125/- (Incl. Of All Taxes)</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+ <!-- Whatssapp -->
+    <a href="https://wa.me/8146002890" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </a>
+    <a href="tel:+918146002890" class="call-button" target="_blank">
+        <img class="images" src="Vfine_Img/Img/call.png" alt="Call Icon" style="width: 50px; height: 30px;">
+    </a>
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo-container">
+                    <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
+                </div>
+                <p style="font-weight: bold; font-style: italic;">GST IN: 02KAVPM5517D1Z1</p>
+                <p>Vfine offers natural herbal products crafted with purity, essential oils, and eco-friendly
+                    ingredients.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/vfineconsumer25/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588286173253"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a
+                        href="Follow the VFine Herbal channel on WhatsApp: https://whatsapp.com/channel/0029VbC3COj0AgW5wIDLIa1y"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                <a href="products.html"><i class="fas fa-chevron-right"></i> Products</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8146002890" style="color: #b0b0b0; text-decoration: none; display: inline;">
+                        8146002890
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:vfineconsumer@gmail.com"
+                        style="color: #b0b0b0; text-decoration: none; display: inline;">
+                        vfineconsumer@gmail.com
+                    </a>
+                </p>
+                <a href="https://www.google.com/maps?q=30.9558075,76.814645&z=17&hl=en">
+                    <p><i class="fas fa-map-marker-alt"></i>Shop No.5 1st Floor, Near Sangam Hotel, Sai Road Baddi,
+                        Solan,
+                        Himanchal Pradesh 173205</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a style="text-decoration: none; color: white;" href="index.html">Vfineconsumer.</a> All
+                rights reserved. | Designed By <a style="text-decoration: none; color: white;"
+                    href="https://andnetics.in/">Andnetics</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

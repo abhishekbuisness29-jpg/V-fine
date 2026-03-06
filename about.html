@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFine Herbal - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Vfine_Img/logo/Favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c17b5c;
+            --primary-dark: #a55d4a;
+            --secondary: #fae1db;
+            --accent: #ffd7c4;
+            --dark: #2d2d2d;
+            --light: #fffaf5;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #c17b5c, #e6a48b);
+            --shadow: 0 20px 40px rgba(193, 123, 92, 0.1);
+            --shadow-hover: 0 30px 60px rgba(193, 123, 92, 0.2);
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Active Page Button */
+        .nav-links a.active {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        .logo-container {
+            height: auto !important;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        .phone-tab {
+            background: var(--gradient);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            color: white !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(193, 123, 92, 0.3);
+            font-size: 0.95rem;
+        }
+
+        .phone-tab:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(193, 123, 92, 0.4);
+        }
+
+        .phone-tab i {
+            color: white;
+            animation: ring 2s infinite;
+        }
+
+        @keyframes ring {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-15deg);
+            }
+
+            30% {
+                transform: rotate(10deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+            transition: 0.3s;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Page Header */
+        .page-header {
+            height: 300px;
+            background: linear-gradient(135deg, #c17b5c, #a55d4a);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .page-header h1 {
+            position: relative;
+            font-size: 3.5rem;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+            font-family: 'Playfair Display', serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Content */
+        .about-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.5s;
+            animation: floatImage 4s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            z-index: -1;
+            transition: 0.4s;
+        }
+
+        .about-image:hover {
+            transform: translate(-8px, -8px);
+        }
+
+        .about-image:hover::before {
+            top: 8px;
+            left: 8px;
+            right: -8px;
+            bottom: -8px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            animation: glowPulse 3s infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 10px rgba(193, 123, 92, 0.2); }
+            50% { text-shadow: 0 0 20px rgba(193, 123, 92, 0.4); }
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .about-text p:hover {
+            transform: translateX(10px);
+            color: var(--dark);
+        }
+
+        /* Establishment Badge */
+        .est-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(193, 123, 92, 0.3);
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 1.2rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--gradient);
+            padding: 4rem 5%;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '✦ ✦ ✦';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.1);
+            font-family: serif;
+            transform: rotate(15deg);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .leader-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            text-align: center;
+            border: 1px solid rgba(193, 123, 92, 0.1);
+        }
+
+        .leader-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(193, 123, 92, 0.2);
+            border-color: var(--primary);
+        }
+
+        .leader-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            transform-origin: left;
+        }
+
+        .leader-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .leader-img {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(145deg, #f9f0e9, #f5e4d8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .leader-card:hover .leader-img {
+            background: linear-gradient(145deg, #f5e4d8, #f9f0e9);
+        }
+
+        .leader-img i {
+            font-size: 8rem;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: 0.4s;
+        }
+
+        .leader-card:hover .leader-img i {
+            transform: scale(1.1) rotate(5deg);
+            color: var(--primary-dark);
+        }
+
+        .leader-info {
+            padding: 2rem;
+        }
+
+        .leader-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .leader-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Working Hours Card */
+        .hours-section {
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hours-card {
+            background: white;
+            border-radius: 40px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid rgba(193, 123, 92, 0.1);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hours-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(193, 123, 92, 0.15);
+        }
+
+        .hours-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .hours-card i {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: 0.4s;
+        }
+
+        .hours-card:hover i {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .hours-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .hours-detail {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-note {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 5rem 5%;
+            background: #f5f0eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values-section::before {
+            content: '✦ ✦ ✦';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 6rem;
+            color: rgba(193, 123, 92, 0.1);
+            font-family: serif;
+            transform: rotate(15deg);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(193, 123, 92, 0.1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(193, 123, 92, 0.15);
+            border-color: var(--primary);
+        }
+
+        .value-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: 0.4s;
+        }
+
+        .value-card:hover i {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .value-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Products Summary */
+        .products-summary {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(193, 123, 92, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            transform-origin: left;
+        }
+
+        .product-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-category:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 45px rgba(193, 123, 92, 0.15);
+            border-color: var(--primary);
+        }
+
+        .product-category i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            transition: 0.4s;
+        }
+
+        .product-category:hover i {
+            transform: scale(1.2);
+        }
+
+        .product-category h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-category p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ========== FOOTER (SAME AS HOME PAGE) ========== */
+        .footer {
+            background: #1e2a2a;
+            color: white;
+            padding: 4rem 5% 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.6rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .footer-col p {
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a {
+            color: #b0b0b0;
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            display: block;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-col i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+            border: none;
+        }
+
+        /* Social Icons - Same as Home Page */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b0b0;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            display: inline;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary);
+            transform: none;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(193, 123, 92, 0.3);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(193, 123, 92, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 2rem;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                animation: slideDown 0.3s ease;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .hours-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .leader-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .footer-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .about-image img {
+                height: 300px;
+            }
+            
+            .about-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+        .whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Bottom distance */
+    right: 20px; /* Right distance */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* WhatsApp logo style */
+  .whatsapp-button img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* Hover effect */
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1); /* Slight scale-up on hover */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+    }
+  
+    .whatsapp-button img {
+        width: 30px;
+        height: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+        bottom: 1.5rem;
+    }
+  
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+  }
+
+  /* Index */
+
+.call-button {
+position: fixed;
+bottom: 6.5rem; /* Bottom distance */
+right: 20px; /* Right distance */
+width: 60px; /* Default width */
+height: 60px; /* Default height */
+background-color: #5270FF;
+border-radius: 50%;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.3s ease-in-out;
+}
+
+.call-button img {
+width: 50%; /* Image size */
+height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Media query for tablets */
+@media (max-width: 1023px) and (min-width: 768px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 60px; /* Default width */
+    height: 60px; /* Default height */
+    bottom: 6rem; /* Adjust bottom position */
+    right: 20px;
+}
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 50px; /* Further reduced size for mobile */
+    height: 50px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 3% !important;
+}
+
+.call-button .images {
+    width: 40px !important;
+    height: 30px !important;
+}
+}
+/* Media query for extra-small mobile devices */
+@media (max-width: 480px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 4% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 424px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 337px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+@media (max-width: 330px) {
+.call-button {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45px; /* Further reduced size for mobile */
+    height: 45px; /* Further reduced size for mobile */
+    /* margin-bottom: 1rem !important; */
+    right: 6.5% !important;
+    bottom: 5rem;
+}
+
+.call-button .images {
+    width: 30px !important;
+    height: 20px !important;
+}
+}
+/* ========== CERTIFICATIONS MARQUEE SECTION ========== */
+.certifications-section {
+    padding: 4rem 5%;
+    background: linear-gradient(145deg, #ffffff, #fcf5f0);
+    position: relative;
+    overflow: hidden;
+}
+
+.certifications-section::before {
+    content: '✓ ✓ ✓';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 8rem;
+    color: rgba(193, 123, 92, 0.03);
+    font-family: serif;
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+
+.certifications-section::after {
+    content: '✶ ✶ ✶';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 8rem;
+    color: rgba(193, 123, 92, 0.03);
+    font-family: serif;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+/* Title Styles */
+.certifications-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInTitle 1s ease;
+}
+
+.certifications-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 3px;
+    animation: expandLine 0.8s ease 0.3s forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes expandLine {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Section Subtitle */
+.certifications-section .section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.certifications-section .section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--gradient);
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5rem 0;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: inset 0 0 30px rgba(193, 123, 92, 0.05);
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(90deg, #fcf5f0, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(-90deg, #fcf5f0, transparent);
+}
+
+/* Marquee Track */
+.marquee-track {
+    display: flex;
+    gap: 2.5rem;
+    animation: marqueeScroll 30s linear infinite;
+    width: max-content;
+    padding: 0.5rem 0;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Certification Items */
+.certification-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 200px;
+    padding: 1.5rem 1rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(193, 123, 92, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(193, 123, 92, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.certification-item:hover::before {
+    transform: translateX(0);
+}
+
+.certification-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.05));
+}
+
+.certification-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 35px rgba(193, 123, 92, 0.25);
+    border-color: var(--primary);
+}
+
+.certification-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Certification Badge */
+.certification-badge {
+    background: var(--gradient);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    box-shadow: 0 3px 8px rgba(193, 123, 92, 0.3);
+    transition: 0.3s;
+}
+
+.certification-item:hover .certification-badge {
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(193, 123, 92, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .certification-item {
+        min-width: 160px;
+        height: 180px;
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .certification-item img {
+        height: 100px;
+    }
+    
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certifications-title {
+        font-size: 2rem;
+    }
+    
+    .certifications-section .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .certification-item {
+        min-width: 140px;
+        height: 160px;
+    }
+    
+    .certification-item img {
+        height: 85px;
+    }
+    
+    .marquee-track {
+        gap: 1.5rem;
+        animation: marqueeScroll 25s linear infinite;
+    }
+    
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications-title {
+        font-size: 1.6rem;
+    }
+    
+    .certification-item {
+        min-width: 120px;
+        height: 140px;
+        padding: 1rem 0.5rem;
+    }
+    
+    .certification-item img {
+        height: 70px;
+    }
+    
+    .certification-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    .marquee-track {
+        gap: 1rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="products.html">Our Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="tel:8146002890" class="phone-tab">
+                <i class="fas fa-phone-alt"></i>
+                <span>8146002890</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>About Us</h1>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="Vfine_Img/Img/About Us.png" alt="VFine Herbal Story">
+            </div>
+            <div class="about-text">
+                <span class="est-badge"><i class="fas fa-calendar-alt"></i> Established May 2025</span>
+                <h2>🌿 Welcome to VFine Herbal</h2>
+                <p>VFine Herbal is a young and passionate herbal wellness brand committed to bringing the purest, most
+                    effective natural products to your daily routine. We believe in the timeless wisdom of Ayurveda
+                    combined with modern hygiene standards to create products that are safe, natural, and truly
+                    beneficial.</p>
+                <p>Though we are a new brand, our vision is deeply rooted in ancient Indian herbal traditions. We
+                    started VFine Herbal with a simple mission: to provide chemical-free, authentic, and handcrafted
+                    herbal products that promote holistic wellness.</p>
+                <p><i class="fas fa-quote-left" style="color: #c17b5c;"></i> <strong>Nature's Finest, Crafted for
+                        You.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>2025</h3>
+                <p>Year Established</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Natural Ingredients</p>
+            </div>
+            <div class="stat-item">
+                <h3>8+</h3>
+                <p>Product Categories</p>
+            </div>
+            <div class="stat-item">
+                <h3>0</h3>
+                <p>Animal Testing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <h2 class="section-title">Our Leadership</h2>
+        <p class="section-subtitle">The passionate people behind VFine Herbal</p>
+        <div class="leadership-grid">
+            <div class="leader-card">
+                <div class="leader-img">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="leader-info">
+                    <h3>HARKESH MADAAN</h3>
+                    <div class="leader-title">Founder & Managing Director</div>
+                    <p style="color: #666; margin-top: 1rem;">Visionary leader with a deep passion for Ayurveda and
+                        natural wellness. Committed to bringing authentic herbal products to every home.</p>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-img">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="leader-info">
+                    <h3>VIDHI MADAAN</h3>
+                    <div class="leader-title">Chief Executive Officer (CEO)</div>
+                    <p style="color: #666; margin-top: 1rem;">Driving innovation and excellence in herbal product
+                        development. Ensuring every product meets the highest quality standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours Section -->
+    <section class="hours-section">
+        <div class="hours-card">
+            <i class="fas fa-clock"></i>
+            <h3>Working Hours</h3>
+            <div class="hours-detail">Monday – Saturday</div>
+            <div style="font-size: 2rem; font-weight: 700; color: #c17b5c; margin: 0.5rem 0;">9:30 AM – 6:00 PM</div>
+            <p class="hours-note"><i class="fas fa-sun"></i> Sunday Closed</p>
+            <p style="color: #666; margin-top: 1.5rem;">We're available during working hours to assist you with any
+                queries.</p>
+        </div>
+    </section>
+
+<!-- Certifications Marquee Section -->
+<section class="certifications-section" data-aos="fade-up">
+    <h2 class="certifications-title">Our Certifications & Accreditations</h2>
+    <p class="section-subtitle">Trusted by nature, certified for purity</p>
+
+    <div class="marquee-container">
+        <div class="marquee-track" id="certificationTrack">
+            <!-- First set of certification items -->
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/herbal.jpg" alt="100% Herbal Certified">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/ISO certified.png" alt="ISO Certified">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/Ministry Of Ayush.jpg" alt="Ministry of Ayush">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/non tested.png" alt="Not Tested on Animals">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/GMP certified.jpg" alt="GMP Certified">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/make in india.jpg" alt="Make in India">
+            </div>
+            <div class="certification-item">
+                <img src="Vfine_Img/Certificates/recucle.avif" alt="Recyclable">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Values Section -->
+    <section class="values-section">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">What drives us every day</p>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-leaf"></i>
+                <h3>100% Natural</h3>
+                <p>No harmful chemicals, no artificial additives. Only pure, natural ingredients sourced with care.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Handcrafted with Love</h3>
+                <p>Small batches to ensure quality and freshness. Each product is made with attention and care.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Ayurvedic Wisdom</h3>
+                <p>Formulations based on traditional knowledge passed down through generations.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Eco-Friendly</h3>
+                <p>Sustainable practices and packaging to protect our planet.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-paw"></i>
+                <h3>Cruelty-Free</h3>
+                <p>Never tested on animals. Kind to all creatures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Summary -->
+    <section class="products-summary">
+        <h2 class="section-title">Our Product Range</h2>
+        <p class="section-subtitle">Natural care for your hair and skin</p>
+        <div class="products-grid">
+            <div class="product-category">
+                <i class="fas fa-oil-can"></i>
+                <h4>Hair Oils</h4>
+                <p>Nourishing, non-sticky formulas</p>
+            </div>
+            <div class="product-category">
+                <i class="fas fa-soap"></i>
+                <h4>Facewashes</h4>
+                <p>Gentle cleansing for glowing skin</p>
+            </div>
+            <div class="product-category">
+                <i class="fas fa-pump-soap"></i>
+                <h4>Soaps</h4>
+                <p>Handcrafted with Neem, Turmeric & more</p>
+            </div>
+            <div class="product-category">
+                <i class="fas fa-shower"></i>
+                <h4>Shampoos</h4>
+                <p>Herbal care for beautiful hair</p>
+            </div>
+            <div class="product-category">
+                <i class="fas fa-spa"></i>
+                <h4>Conditioners</h4>
+                <p>Soft, shiny, manageable hair</p>
+            </div>
+        </div>
+    </section>
+
+ <!-- Whatssapp -->
+    <a href="https://wa.me/8146002890" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </a>
+    <a href="tel:+918146002890" class="call-button" target="_blank">
+        <img class="images" src="Vfine_Img/Img/call.png" alt="Call Icon" style="width: 50px; height: 30px;">
+    </a>
+    <!-- Footer - Same as Home Page -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo-container">
+                    <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
+                </div>
+                <p style="font-weight: bold; font-style: italic;">GST IN: 02KAVPM5517D1Z1</p>
+                <p>Vfine offers natural herbal products crafted with purity, essential oils, and eco-friendly
+                    ingredients.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/vfineconsumer25/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588286173253"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VbC3COj0AgW5wIDLIa1y"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                <a href="products.html"><i class="fas fa-chevron-right"></i> Products</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:8146002890" style="color: #b0b0b0; text-decoration: none; display: inline;">
+                        8146002890
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:vfineconsumer@gmail.com"
+                        style="color: #b0b0b0; text-decoration: none; display: inline;">
+                        vfineconsumer@gmail.com
+                    </a>
+                </p>
+                <a href="https://www.google.com/maps?q=30.9558075,76.814645&z=17&hl=en">
+                    <p><i class="fas fa-map-marker-alt"></i>Shop No.5 1st Floor, Near Sangam Hotel, Sai Road Baddi,
+                        Solan, Himanchal Pradesh 173205</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a style="text-decoration: none; color: white;" href="index.html">Vfineconsumer.</a> All
+                rights reserved. | Designed By <a style="text-decoration: none; color: white;"
+                    href="https://andnetics.in/">Andnetics</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        // Duplicate certification items for seamless marquee
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('certificationTrack');
+    if (track) {
+        const items = track.innerHTML;
+        // Duplicate the items to create seamless loop
+        track.innerHTML = items + items;
+    }
+});
+
+// Optional: Pause marquee on hover
+const marqueeTrack = document.querySelector('.marquee-track');
+if (marqueeTrack) {
+    marqueeTrack.addEventListener('mouseenter', () => {
+        marqueeTrack.style.animationPlayState = 'paused';
+    });
+    
+    marqueeTrack.addEventListener('mouseleave', () => {
+        marqueeTrack.style.animationPlayState = 'running';
+    });
+}
+    </script>
+</body>
+</html>
