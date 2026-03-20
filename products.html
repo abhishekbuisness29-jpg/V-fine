@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VFine Herbal - Our Products</title>
+    <title>VFine Herbal - Natural Herbal Products | Soaps, Shampoos, Facewash & More</title>
+    <meta name="description" content="Explore VFine Herbal's complete range of natural products - 35+ herbal soaps, Ayurvedic shampoos, facewash, hair oil, conditioner, and skin care. 100% natural, paraben-free, cruelty-free.">
+    <meta name="keywords" content="herbal products, natural soap, Ayurvedic shampoo, facewash, hair oil, conditioner, skin care, VFine Herbal, organic beauty products">
+    <meta name="author" content="VFine Herbal">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="icon" type="image/png" href="Vfine_Img/logo/Favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Vfine_Img/logo/Favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,16 +17,7 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-    /* Active Page Button */
-        .nav-links a.active {
-            background-color: #c17b5c;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 6px;
-            transition: 0.3s ease;
-        }
 
-   
         body {
             background: #fffaf5;
             color: #2d2d2d;
@@ -42,24 +36,12 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #c17b5c, #a55d4a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .logo-container img {
-    height: 50px;  /* Adjust as needed */
-    width: auto;
-    max-width: 200px; /* Optional: maximum width */
-    object-fit: contain;
-}
-
-/* Remove the inline style */
-.logo-container {
-    height: auto !important; /* Overrides the inline style */
-}
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
 
         .nav-links {
             display: flex;
@@ -74,6 +56,12 @@
             transition: 0.3s;
         }
 
+        .nav-links a.active {
+            background-color: #c17b5c;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
 
         .phone-tab {
             background: #c17b5c;
@@ -95,8 +83,9 @@
         /* Page Header */
         .page-header {
             height: 300px;
-            background: linear-gradient(135deg, #c17b5c, #a55d4a);
-            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Vfine_Img/Img/Bg.png');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,35 +93,16 @@
             color: white;
         }
 
-        .page-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
         .page-header h1 {
-            position: relative;
             font-size: 3.5rem;
-            z-index: 1;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
         }
 
         /* Products Section */
         .products-section {
             padding: 4rem 5%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -245,44 +215,67 @@
             color: white;
         }
 
-        /* Products Grid */
+        /* Modern Product Cards - Clean & Elegant */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .product-card {
-            background: white;
-            border-radius: 20px;
+            background: #ffffff;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(193, 123, 92, 0.12);
             position: relative;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(193, 123, 92, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px rgba(193, 123, 92, 0.2);
+            border-color: rgba(193, 123, 92, 0.3);
         }
 
         .product-badge {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 15px;
+            right: 15px;
             background: #c17b5c;
             color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            z-index: 1;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-img-wrapper {
+            background: linear-gradient(145deg, #fef7f0, #fff3ea);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+            border-bottom: 1px solid rgba(193, 123, 92, 0.1);
         }
 
         .product-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 370px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(5px 8px 12px rgba(0,0,0,0.08));
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
         }
 
         .product-info {
@@ -290,52 +283,84 @@
         }
 
         .product-info h3 {
-            margin-bottom: 0.5rem;
             font-size: 1.2rem;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .product-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            color: #7a6a5c;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
         }
 
         .product-price {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 800;
             color: #c17b5c;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .product-price small {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #8b7a6b;
         }
 
         .product-details {
             display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
-            color: #666;
-            font-size: 0.9rem;
+            color: #8b7a6b;
+            font-size: 0.7rem;
+            flex-wrap: wrap;
+        }
+
+        .product-details span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .product-details i {
             color: #c17b5c;
+            font-size: 0.7rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
+        .btn-order {
+            width: 100%;
             background: linear-gradient(135deg, #c17b5c, #a55d4a);
             color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: 0.3s;
             border: none;
+            padding: 12px 0;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
-            width: 100%;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(193, 123, 92, 0.3);
+        .btn-order:hover {
+            transform: scale(0.98);
+            box-shadow: 0 8px 20px rgba(193, 123, 92, 0.4);
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.1rem;
+            color: #8b7a6b;
+            grid-column: 1 / -1;
+            background: white;
+            border-radius: 20px;
         }
 
         /* Footer */
@@ -375,6 +400,11 @@
             text-decoration: none;
             margin-bottom: 0.8rem;
             display: block;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #c17b5c;
         }
 
         .footer-col i {
@@ -382,10 +412,27 @@
             color: #c17b5c;
         }
 
-        .footer-map iframe {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: #2c3a3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #c17b5c;
+            transform: translateY(-5px);
         }
 
         .footer-bottom {
@@ -396,195 +443,59 @@
             color: #b0b0b0;
         }
 
-        /* ===== ENHANCED RESPONSIVE MODAL WITH CUT BUTTON ===== */
-        .modal {
-            display: none;
+        /* Floating Buttons */
+        .whatsapp-button {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            padding: 1rem;
-            overflow-y: auto;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 30px;
-            max-width: 500px;
-            width: 100%;
-            position: relative;
-            animation: modalSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(193, 123, 92, 0.2);
-            margin: auto;
-        }
-
-        @keyframes modalSlideUp {
-            from {
-                transform: translateY(60px) scale(0.9);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Enhanced close/cut button */
-        .close {
-            position: absolute;
-            top: 15px;
+            bottom: 20px;
             right: 20px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #666;
-            transition: all 0.3s;
-            background: #f5f5f5;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
             border-radius: 50%;
-            line-height: 1;
-            z-index: 10;
-        }
-
-        .close:hover {
-            color: white;
-            background: #c17b5c;
-            transform: rotate(90deg) scale(1.1);
-            box-shadow: 0 5px 15px rgba(193, 123, 92, 0.4);
-        }
-
-        .modal-content h2 {
-            margin-bottom: 1.8rem;
-            color: #2d2d2d;
-            font-size: 1.8rem;
-            font-weight: 600;
-            padding-right: 2rem;
-            background: linear-gradient(135deg, #c17b5c, #a55d4a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-
-        .modal-content form {
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
             display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
         }
 
-        .modal-content input,
-        .modal-content textarea {
-            width: 100%;
-            padding: 1rem 1.2rem;
-            border: 2px solid #f0f0f0;
-            border-radius: 16px;
-            font-size: 1rem;
-            transition: all 0.3s;
-            background: #fafafa;
+        .whatsapp-button img {
+            width: 34px;
+            height: 34px;
         }
 
-        .modal-content input:focus,
-        .modal-content textarea:focus {
-            outline: none;
-            border-color: #c17b5c;
-            background: white;
-            box-shadow: 0 5px 15px rgba(193, 123, 92, 0.1);
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
         }
 
-        .modal-content input[readonly] {
-            background: #f5e9e2;
-            border-color: #e0d6d0;
-            color: #c17b5c;
-            font-weight: 500;
-            cursor: default;
+        .call-button {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #5270FF;
+            border-radius: 50%;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
         }
 
-        .modal-content textarea {
-            resize: vertical;
-            min-height: 80px;
+        .call-button img {
+            width: 30px;
+            height: 30px;
         }
 
-        .modal-content .btn {
-            margin-top: 1rem;
-            padding: 1rem;
-            font-size: 1.1rem;
-            background: linear-gradient(135deg, #c17b5c, #a55d4a);
-            border-radius: 50px;
-            box-shadow: 0 10px 20px rgba(193, 123, 92, 0.3);
-        }
-
-        .modal-content .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(193, 123, 92, 0.4);
-        }
-
-        /* Responsive modal styles for all screen sizes */
-        @media (max-width: 768px) {
-            .modal-content {
-                padding: 1.8rem;
-                max-width: 95%;
-                border-radius: 25px;
-            }
-
-            .modal-content h2 {
-                font-size: 1.6rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .close {
-                top: 12px;
-                right: 15px;
-                width: 36px;
-                height: 36px;
-                font-size: 1.6rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .modal-content {
-                padding: 1.5rem;
-                max-width: 100%;
-                border-radius: 20px;
-            }
-
-            .modal-content h2 {
-                font-size: 1.4rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .close {
-                top: 10px;
-                right: 12px;
-                width: 32px;
-                height: 32px;
-                font-size: 1.4rem;
-            }
-
-            .modal-content input,
-            .modal-content textarea {
-                padding: 0.8rem 1rem;
-                font-size: 0.95rem;
-                border-radius: 12px;
-            }
-        }
-
-        /* Responsive adjustments for existing layout */
+        /* Responsive */
         @media (max-width: 968px) {
             .nav-links {
                 display: none;
             }
-            
             .nav-links.active {
                 display: flex;
                 flex-direction: column;
@@ -595,12 +506,11 @@
                 background: white;
                 padding: 2rem;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                gap: 1.5rem;
             }
-            
             .menu-icon {
                 display: block;
             }
-            
             .page-header h1 {
                 font-size: 2.5rem;
             }
@@ -608,16 +518,19 @@
 
         @media (max-width: 768px) {
             .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
-            
-            .page-header h1 {
-                font-size: 2rem;
+            .call-button {
+                bottom: 85px;
+                width: 50px;
+                height: 50px;
             }
-            
-            .filter-btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+            }
+            .card-img-wrapper {
+                min-height: 220px;
             }
         }
 
@@ -625,232 +538,33 @@
             .search-box {
                 flex-direction: column;
             }
-            
             .search-box button {
                 width: 100%;
             }
-            
             .category-filter {
                 gap: 0.6rem;
             }
-            
             .filter-btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
             }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
+            .product-info {
+                padding: 1.2rem;
+            }
+            .product-price {
+                font-size: 1.3rem;
             }
         }
-                 /* Social Icons */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center !important;
-            justify-content: center !important;
-            color: white;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-            margin: 0;
-        }
-
-        .social-links a:hover {
-            color: white;
-            transform: translateY(-8px) scale(1.1);
-            border-color: transparent;
-        }
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px; /* Bottom distance */
-    right: 20px; /* Right distance */
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* WhatsApp logo style */
-  .whatsapp-button img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  /* Hover effect */
-  .whatsapp-button:hover {
-    background-color: #128C7E;
-    transform: scale(1.1); /* Slight scale-up on hover */
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    .whatsapp-button {
-        width: 50px;
-        height: 50px;
-        bottom: 1rem;
-    }
-  
-    .whatsapp-button img {
-        width: 30px;
-        height: 30px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .whatsapp-button {
-        width: 45px;
-        height: 45px;
-        bottom: 1.5rem;
-    }
-  
-    .whatsapp-button img {
-        width: 25px;
-        height: 25px;
-    }
-  }
-
-  /* Index */
-
-.call-button {
-position: fixed;
-bottom: 6.5rem; /* Bottom distance */
-right: 20px; /* Right distance */
-width: 60px; /* Default width */
-height: 60px; /* Default height */
-background-color: #5270FF;
-border-radius: 50%;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-z-index: 1000;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: all 0.3s ease-in-out;
-}
-
-.call-button img {
-width: 50%; /* Image size */
-height: auto; /* Maintain aspect ratio */
-}
-
-
-/* Media query for tablets */
-@media (max-width: 1023px) and (min-width: 768px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 60px; /* Default width */
-    height: 60px; /* Default height */
-    bottom: 6rem; /* Adjust bottom position */
-    right: 20px;
-}
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 50px; /* Further reduced size for mobile */
-    height: 50px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 3% !important;
-}
-
-.call-button .images {
-    width: 40px !important;
-    height: 30px !important;
-}
-}
-/* Media query for extra-small mobile devices */
-@media (max-width: 480px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 4% !important;
-    bottom: 5rem;
-}
-
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 424px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 5% !important;
-    bottom: 5rem;
-}
-
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 337px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 5% !important;
-    bottom: 5rem;
-}
-
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 330px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 6.5% !important;
-    bottom: 5rem;
-}
-
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-
-
     </style>
 </head>
 <body>
-   <nav class="navbar">
+    <nav class="navbar">
         <div class="logo-container">
             <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
         </div>
         <div class="nav-links" id="navLinks">
-            <a href="index.html" >Home</a>
-            <a href="about.html" >About Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
             <a href="products.html" class="active">Our Products</a>
             <a href="contact.html">Contact Us</a>
             <a href="tel:8146002890" class="phone-tab">
@@ -868,9 +582,8 @@ height: auto; /* Maintain aspect ratio */
     </div>
 
     <section class="products-section">
-        <p class="intro-text">Discover our range of handcrafted, natural beauty products. Each product is made with love using the finest organic ingredients.</p>
+        <p class="intro-text">Discover our complete range of handcrafted, natural beauty products. Each product is made with love using the finest organic ingredients.</p>
 
-        <!-- Feature Cards -->
         <div class="feature-grid">
             <div class="feature-card">
                 <i class="fas fa-leaf"></i>
@@ -889,53 +602,35 @@ height: auto; /* Maintain aspect ratio */
             </div>
         </div>
 
-        <!-- Search and Filter -->
         <div class="search-section">
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
-                <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+                <input type="text" id="searchInput" placeholder="Search products by name..." onkeyup="searchProducts()">
+                <button onclick="searchProducts()"><i class="fas fa-search"></i> Search</button>
             </div>
-
             <div class="category-filter">
-                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('soap')">Soaps (35+)</button>
+                <button class="filter-btn" onclick="filterProducts('shampoo')">Shampoo</button>
                 <button class="filter-btn" onclick="filterProducts('conditioner')">Conditioner</button>
                 <button class="filter-btn" onclick="filterProducts('hairOil')">Hair Oil</button>
                 <button class="filter-btn" onclick="filterProducts('facewash')">Facewash</button>
-                <button class="filter-btn" onclick="filterProducts('shampoo')">Shampoo</button>
-                <button class="filter-btn" onclick="filterProducts('soap')">Soap</button>
+                <button class="filter-btn" onclick="filterProducts('skinCare')">Skin Care</button>
+                <button class="filter-btn" onclick="filterProducts('aushadhi')">Aushadhi</button>
             </div>
         </div>
 
-        <!-- Products Grid -->
         <div class="products-grid" id="productsGrid"></div>
     </section>
 
-    <!-- Enhanced Responsive Order Modal with Cut Button -->
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Place Your Order</h2>
-            <form id="orderForm" onsubmit="submitOrder(event)">
-                <input type="text" id="modalName" placeholder="Your Full Name" required>
-                <input type="tel" id="modalContact" placeholder="Contact Number" required>
-                <input type="email" id="modalEmail" placeholder="Email ID" required>
-                <input type="text" id="modalProduct" readonly>
-                <input type="text" id="modalPrice" readonly>
-                <textarea id="modalAddress" rows="3" placeholder="Shipping Address" required></textarea>
-                <textarea id="modalMessage" rows="2" placeholder="Additional Message (Optional)"></textarea>
-                <button type="submit" class="btn">Submit Order</button>
-            </form>
-        </div>
-    </div>
-
- <!-- Whatssapp -->
-    <a href="https://wa.me/8146002890" class="whatsapp-button" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/918146002890" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
     <a href="tel:+918146002890" class="call-button" target="_blank">
-        <img class="images" src="Vfine_Img/Img/call.png" alt="Call Icon" style="width: 50px; height: 30px;">
+        <img class="images" src="Vfine_Img/Img/call.png" alt="Call Icon" style="width: 30px; height: 30px;">
     </a>
-   <!-- Footer -->
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-col">
@@ -943,16 +638,11 @@ height: auto; /* Maintain aspect ratio */
                     <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
                 </div>
                 <p style="font-weight: bold; font-style: italic;">GST IN: 02KAVPM5517D1Z1</p>
-                <p>Vfine offers natural herbal products crafted with purity, essential oils, and eco-friendly
-                    ingredients.
-                </p>
+                <p>Vfine offers natural herbal products crafted with purity, essential oils, and eco-friendly ingredients.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/vfineconsumer25/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61588286173253"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a
-                        href="Follow the VFine Herbal channel on WhatsApp: https://whatsapp.com/channel/0029VbC3COj0AgW5wIDLIa1y"><i
-                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588286173253"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VbC3COj0AgW5wIDLIa1y"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -964,148 +654,161 @@ height: auto; /* Maintain aspect ratio */
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
-
-                <p>
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:8146002890" style="color: #b0b0b0; text-decoration: none; display: inline;">
-                        8146002890
-                    </a>
-                </p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:vfineconsumer@gmail.com"
-                        style="color: #b0b0b0; text-decoration: none; display: inline;">
-                        vfineconsumer@gmail.com
-                    </a>
-                </p>
-                <a href="https://www.google.com/maps?q=30.9558075,76.814645&z=17&hl=en">
-                    <p><i class="fas fa-map-marker-alt"></i>Shop No.5 1st Floor, Near Sangam Hotel, Sai Road Baddi,
-                        Solan,
-                        Himanchal Pradesh 173205</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:8146002890" style="display: inline;">8146002890</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:vfineconsumer@gmail.com" style="display: inline;">vfineconsumer@gmail.com</a></p>
+                <a href="https://www.google.com/maps?q=30.9558075,76.814645&z=17&hl=en" target="_blank">
+                    <p><i class="fas fa-map-marker-alt"></i> Shop No.5, Sai Road Baddi, Solan, HP 173205</p>
                 </a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 <a style="text-decoration: none; color: white;" href="index.html">Vfineconsumer.</a> All
-                rights reserved. | Designed By <a style="text-decoration: none; color: white;"
-                    href="https://andnetics.in/">Andnetics</a>
+            <p>&copy; 2026 <a style="text-decoration: none; color: white;" href="index.html">Vfineconsumer.</a> All rights reserved. | Designed By <a style="text-decoration: none; color: white;" href="https://andnetics.in/">Andnetics</a></p>
         </div>
     </footer>
 
     <script>
-        // Product database (updated with correct image paths)
+        // Complete Product Database
         const products = [
-            // Conditioner (1)
-            { id: 1, name: 'Green Tea & Aloe Vera Conditioner', price: 125, image: 'Vfine_Img/Conditioner/Conditioner Green tea and aloevera.png', category: 'conditioner', description: 'Paraben Free | For All Hair | 100ml/3.4oz.' },
-            // Hair Oil (1)
-            { id: 2, name: 'Ayurvedic Hair Oil', price: 220, image: 'Vfine_Img/Hair Oil/Ayurvedic Hair Oil.png', category: 'hairOil', description: 'Pure herbal oil for healthy, strong hair.' },
-            // Facewash (2)
-            { id: 3, name: 'Activated Charcoal Facewash', price: 90, image: 'Vfine_Img/Facewash/Facewash Activated Charcoal.png', category: 'facewash', description: 'Deep cleansing facewash with activated charcoal.' },
-            { id: 4, name: 'Vitamin C Facewash', price: 90, image: 'Vfine_Img/Facewash/Facewash Vitamin C.png', category: 'facewash', description: 'Brightening facewash with Vitamin C for glowing skin.' },
-            // Shampoo (1)
-            { id: 5, name: 'Ayurvedic Hair Shampoo', price: 125, image: 'Vfine_Img/Shampoo/Ayurvedic Hair Shampoo.png', category: 'shampoo', description: 'Gentle shampoo that adds volume without stripping natural oils.' },
-            // Soap (6)
-            { id: 6, name: 'Haldi Chandan Soap', price: 90, image: 'Vfine_Img/Soap/Haldi Chandan Soap.png', category: 'soap', description: 'Fairness Ayurvedic Soap with Sandal & Haldi.' },
-            { id: 7, name: 'Kesar Soap', price: 90, image: 'Vfine_Img/Soap/Kesar Soap.png', category: 'soap', description: 'Rejuvenating soap with Kesar for glowing skin.' },
-            { id: 8, name: 'Lime Fresh Soap', price: 90, image: 'Vfine_Img/Soap/Lime Fresh Soap.png', category: 'soap', description: 'Refreshing, cooling & sanitizing lemon soap.' },
-            { id: 9, name: 'Neem Aloevera Soap', price: 90, image: 'Vfine_Img/Soap/Neem Aloevera Soap.png', category: 'soap', description: 'Neem & Aloevera for healthy, moisturized skin.' },
-            { id: 10, name: 'Neem Tulsi Soap', price: 90, image: 'Vfine_Img/Soap/Neem Tulsi Soap.png', category: 'soap', description: 'Antiseptic & purifying with Neem & Tulsi.' },
-            { id: 11, name: 'Papaya Soap', price: 90, image: 'Vfine_Img/Soap/Papaya Soap.png', category: 'soap', description: 'Skin brightening & anti-aging Papaya soap.' }
+            // Soaps
+            { id: 1, name: 'Haldi Chandan Soap', price: 90, image: 'Vfine_Img/Soap/Haldi Chandan Soap.png', category: 'soap', description: 'Turmeric & Sandalwood soap for glowing, radiant skin.' },
+            { id: 2, name: 'Kesar Soap', price: 90, image: 'Vfine_Img/Soap/Kesar Soap.png', category: 'soap', description: 'Saffron enriched soap for skin brightening and even tone.' },
+            { id: 3, name: 'Lime Fresh Soap', price: 90, image: 'Vfine_Img/Soap/Lime Fresh Soap.png', category: 'soap', description: 'Refreshing citrus soap with lime extract for fresh, clean skin.' },
+            { id: 4, name: 'Neem Aloe Vera Soap', price: 90, image: 'Vfine_Img/Soap/Neem Aloevera Soap.png', category: 'soap', description: 'Neem & Aloe Vera for acne-free, moisturized skin.' },
+            { id: 5, name: 'Neem Tulsi Soap', price: 90, image: 'Vfine_Img/Soap/Neem Tulsi Soap.png', category: 'soap', description: 'Antiseptic Neem & Holy Basil for clear, healthy skin.' },
+            { id: 6, name: 'Papaya Soap', price: 90, image: 'Vfine_Img/Soap/Papaya Soap.png', category: 'soap', description: 'Papaya enzymes for gentle exfoliation and brightening.' },
+            { id: 7, name: '10 In 1 Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/10 in One Medicated Natural Bathing Glycerine Soap.png', category: 'soap', description: 'Multi-benefit glycerine soap with 10 natural ingredients.' },
+            { id: 8, name: 'Charcoal Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Activated Charcoal Glycerine Soap.png', category: 'soap', description: 'Activated charcoal for deep cleansing and detox.' },
+            { id: 9, name: 'Almond Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Almond Glycerine Soap.png', category: 'soap', description: 'Almond oil enriched for soft, nourished skin.' },
+            { id: 10, name: 'Aloe Vera Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Aloevera Glycerine Soap.png.png', category: 'soap', description: 'Soothing Aloe Vera for hydration and healing.' },
+            { id: 11, name: 'Coconut Milk Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Coconut Milk Glycerine Soap.png', category: 'soap', description: 'Coconut milk for deep moisturization.' },
+            { id: 12, name: 'Haldi Besan Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Haldi Besan Glycerome Soap.png', category: 'soap', description: 'Turmeric & Gram flour for natural glow.' },
+            { id: 13, name: 'Honey Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Honey Glycerine Soap.png', category: 'soap', description: 'Honey enriched for soft, supple skin.' },
+            { id: 14, name: 'Jasmine Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Jasmine Glycerine Soap.png', category: 'soap', description: 'Jasmine fragrance for relaxation and glowing skin.' },
+            { id: 15, name: 'Lavender Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Lavender Glycerine Soap.png', category: 'soap', description: 'Lavender for calm, soothing skin care.' },
+            { id: 16, name: 'Rose Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Rose Glycerine Soap.png', category: 'soap', description: 'Rose petals for gentle, soothing care.' },
+            { id: 17, name: 'Tea Tree Oil Glycerine Soap', price: 90, image: 'Vfine_Img/Soap/New Soap/Tea Tree Oil Glycerine Soap.png', category: 'soap', description: 'Tea tree oil for acne-prone skin.' },
+            
+            // Shampoo
+            { id: 18, name: 'Ayurvedic Hair Shampoo', price: 125, image: 'Vfine_Img/Shampoo/Ayurvedic Hair Shampoo.png', category: 'shampoo', description: 'Gentle Ayurvedic shampoo for healthy, strong hair. 200ml.' },
+            { id: 19, name: 'Ayurvedic Hair Shampoo (Variant)', price: 125, image: 'Vfine_Img/Shampoo/Ayurvedic Hair Shampoo2.png', category: 'shampoo', description: 'Herbal shampoo with natural ingredients.' },
+            
+            // Conditioner
+            { id: 20, name: 'Green Tea & Aloe Vera Conditioner', price: 125, image: 'Vfine_Img/Conditioner/Conditioner Green tea and aloevera.png', category: 'conditioner', description: 'Green Tea & Aloe Vera conditioner for smooth, manageable hair. 100ml.' },
+            
+            // Hair Oil
+            { id: 21, name: 'Ayurvedic Hair Oil', price: 220, image: 'Vfine_Img/Hair Oil/Ayurvedic Hair Oil.png', category: 'hairOil', description: 'Pure herbal oil for hair growth and strength. 100ml.' },
+            { id: 22, name: 'Onion Hair Oil', price: 220, image: 'Vfine_Img/Hair Oil/Onion Oil.png', category: 'hairOil', description: 'Onion oil for hair fall control and thickness.' },
+            
+            // Facewash
+            { id: 23, name: 'Activated Charcoal Facewash', price: 125, image: 'Vfine_Img/Facewash/Facewash Activated Charcoal.png', category: 'facewash', description: 'Deep cleansing charcoal facewash for oily skin. 100ml.' },
+            { id: 24, name: 'Vitamin C Facewash', price: 125, image: 'Vfine_Img/Facewash/Facewash Vitamin C.png', category: 'facewash', description: 'Brightening Vitamin C facewash for glowing skin.' },
+            
+            // Skin Care
+            { id: 25, name: 'Aloe Vera Body Lotion', price: 0, image: 'Vfine_Img/Skin Care/Aloevera Body Lotion.png', category: 'skinCare', description: 'Hydrating Aloe Vera body lotion for all skin types.' },
+            { id: 26, name: 'Aloe Vera Gel', price: 0, image: 'Vfine_Img/Skin Care/Aloevera Gel.png', category: 'skinCare', description: 'Pure Aloe Vera gel for skin soothing and hydration.' },
+            { id: 27, name: 'Herbal Lip Balm', price: 0, image: 'Vfine_Img/Skin Care/Lipbalm.png', category: 'skinCare', description: 'Natural lip balm for soft, nourished lips.' },
+            { id: 28, name: 'Multani Mitti', price: 0, image: 'Vfine_Img/Skin Care/Multani Mitti.png', category: 'skinCare', description: "Fuller's Earth face pack for oil control." },
+            { id: 29, name: 'Rose Water', price: 0, image: 'Vfine_Img/Skin Care/Rose Water.png', category: 'skinCare', description: 'Pure rose water for toner and refreshing mist.' },
+            
+            // Aushadhi
+            { id: 30, name: 'Ortho Relief Oil', price: 0, image: 'Vfine_Img/Ausadhi/Ortho Relief Oil.png', category: 'aushadhi', description: 'Ayurvedic oil for joint and muscle pain relief.' },
+            { id: 31, name: 'Pain Relief Oil', price: 0, image: 'Vfine_Img/Ausadhi/Pain Releif.png', category: 'aushadhi', description: 'Natural pain relief oil for body aches.' }
         ];
 
-        // Display all products
+        let currentFilter = 'all';
+        let currentSearchTerm = '';
+
+        function getCategoryDisplayName(category) {
+            const names = {
+                'soap': 'Soap',
+                'shampoo': 'Shampoo',
+                'conditioner': 'Conditioner',
+                'hairOil': 'Hair Oil',
+                'facewash': 'Facewash',
+                'skinCare': 'Skin Care',
+                'aushadhi': 'Aushadhi'
+            };
+            return names[category] || category;
+        }
+
         function displayProducts(productsToShow) {
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = '';
             
+            if (productsToShow.length === 0) {
+                grid.innerHTML = '<div class="no-results"><i class="fas fa-search"></i> No products found. Try another search term or category.</div>';
+                return;
+            }
+            
             productsToShow.forEach(product => {
+                const categoryName = getCategoryDisplayName(product.category);
+                const priceDisplay = product.price > 0 ? `₹${product.price}` : 'Contact for Price';
+                const priceSmall = product.price > 0 ? '<small>incl. taxes</small>' : '';
+                
                 grid.innerHTML += `
-                    <div class="product-card" data-category="${product.category}">
-                        <div class="product-badge">${product.category}</div>
-                        <img src="${product.image}" alt="${product.name}">
+                    <div class="product-card">
+                        <div class="product-badge">${categoryName}</div>
+                        <div class="card-img-wrapper">
+                            <img src="${product.image}" alt="${product.name}" onerror="this.src='Vfine_Img/logo/vfine logo.png'">
+                        </div>
                         <div class="product-info">
                             <h3>${product.name}</h3>
                             <p class="product-description">${product.description}</p>
                             <div class="product-details">
                                 <span><i class="fas fa-leaf"></i> 100% Natural</span>
-                                <span><i class="fas fa-flask"></i> Organic</span>
+                                <span><i class="fas fa-flask"></i> Herbal</span>
+                                <span><i class="fas fa-ban"></i> No Parabens</span>
                             </div>
-                            <div class="product-price">₹${product.price}</div>
-                            <button class="btn" onclick="openModal('${product.name}', ${product.price})">Place Order</button>
+                            <div class="product-price">${priceDisplay} ${priceSmall}</div>
+                            <button class="btn-order" onclick="orderOnWhatsApp('${product.name.replace(/'/g, "\\'")}', ${product.price})">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
                         </div>
                     </div>
                 `;
             });
         }
 
-        // Filter products by category
         function filterProducts(category) {
+            currentFilter = category;
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
-            if (category === 'all') {
-                displayProducts(products);
-            } else {
-                const filtered = products.filter(p => p.category === category);
-                displayProducts(filtered);
-            }
+            applyFilters();
         }
-
-        // Search products
+        
         function searchProducts() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = products.filter(p => 
-                p.name.toLowerCase().includes(searchTerm) || 
-                p.description.toLowerCase().includes(searchTerm)
-            );
+            currentSearchTerm = document.getElementById('searchInput').value.toLowerCase();
+            applyFilters();
+        }
+        
+        function applyFilters() {
+            let filtered = [...products];
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(p => p.category === currentFilter);
+            }
+            if (currentSearchTerm) {
+                filtered = filtered.filter(p => 
+                    p.name.toLowerCase().includes(currentSearchTerm) || 
+                    p.description.toLowerCase().includes(currentSearchTerm)
+                );
+            }
             displayProducts(filtered);
         }
 
-        // Modal functions
-        function openModal(productName, price) {
-            document.getElementById('orderModal').style.display = 'flex';
-            document.getElementById('modalProduct').value = productName;
-            document.getElementById('modalPrice').value = '₹' + price;
-            // Prevent body scrolling when modal is open
-            document.body.style.overflow = 'hidden';
+        function orderOnWhatsApp(productName, price) {
+            const phone = "918146002890";
+            const priceText = price > 0 ? `(₹${price})` : '';
+            const message = `Hello VFine Herbal, I'm interested in ordering ${productName} ${priceText}. Please share details about delivery and payment.`;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
 
-        function closeModal() {
-            document.getElementById('orderModal').style.display = 'none';
-            document.getElementById('orderForm').reset();
-            // Restore body scrolling
-            document.body.style.overflow = 'auto';
-        }
-
-        function submitOrder(event) {
-            event.preventDefault();
-            alert('Thank you for your order! We will contact you soon.');
-            closeModal();
-        }
-
-        // Toggle mobile menu
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Initialize with all products
         displayProducts(products);
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('orderModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
     </script>
 </body>
 </html>

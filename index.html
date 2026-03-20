@@ -1611,179 +1611,205 @@
                 font-size: 1.6rem;
             }
         }
-        
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px; /* Bottom distance */
-    right: 20px; /* Right distance */
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* WhatsApp logo style */
-  .whatsapp-button img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  /* Hover effect */
-  .whatsapp-button:hover {
-    background-color: #128C7E;
-    transform: scale(1.1); /* Slight scale-up on hover */
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    .whatsapp-button {
-        width: 50px;
-        height: 50px;
-        bottom: 1rem;
-    }
-  
-    .whatsapp-button img {
-        width: 30px;
-        height: 30px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .whatsapp-button {
-        width: 45px;
-        height: 45px;
-        bottom: 1.5rem;
-    }
-  
-    .whatsapp-button img {
-        width: 25px;
-        height: 25px;
-    }
-  }
 
-  /* Index */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            /* Bottom distance */
+            right: 20px;
+            /* Right distance */
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
 
-.call-button {
-position: fixed;
-bottom: 6.5rem; /* Bottom distance */
-right: 20px; /* Right distance */
-width: 60px; /* Default width */
-height: 60px; /* Default height */
-background-color: #5270FF;
-border-radius: 50%;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-z-index: 1000;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: all 0.3s ease-in-out;
-}
+        /* WhatsApp logo style */
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
 
-.call-button img {
-width: 50%; /* Image size */
-height: auto; /* Maintain aspect ratio */
-}
+        /* Hover effect */
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            /* Slight scale-up on hover */
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+                bottom: 1rem;
+            }
+
+            .whatsapp-button img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                width: 45px;
+                height: 45px;
+                bottom: 1.5rem;
+            }
+
+            .whatsapp-button img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        /* Index */
+
+        .call-button {
+            position: fixed;
+            bottom: 6.5rem;
+            /* Bottom distance */
+            right: 20px;
+            /* Right distance */
+            width: 60px;
+            /* Default width */
+            height: 60px;
+            /* Default height */
+            background-color: #5270FF;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .call-button img {
+            width: 50%;
+            /* Image size */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
 
 
-/* Media query for tablets */
-@media (max-width: 1023px) and (min-width: 768px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 60px; /* Default width */
-    height: 60px; /* Default height */
-    bottom: 6rem; /* Adjust bottom position */
-    right: 20px;
-}
-}
+        /* Media query for tablets */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 60px;
+                /* Default width */
+                height: 60px;
+                /* Default height */
+                bottom: 6rem;
+                /* Adjust bottom position */
+                right: 20px;
+            }
+        }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 50px; /* Further reduced size for mobile */
-    height: 50px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 3% !important;
-}
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 50px;
+                /* Further reduced size for mobile */
+                height: 50px;
+                /* Further reduced size for mobile */
+                /* margin-bottom: 1rem !important; */
+                right: 3% !important;
+            }
 
-.call-button .images {
-    width: 40px !important;
-    height: 30px !important;
-}
-}
-/* Media query for extra-small mobile devices */
-@media (max-width: 480px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 4% !important;
-    bottom: 5rem;
-}
+            .call-button .images {
+                width: 40px !important;
+                height: 30px !important;
+            }
+        }
 
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 424px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 5% !important;
-    bottom: 5rem;
-}
+        /* Media query for extra-small mobile devices */
+        @media (max-width: 480px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 45px;
+                /* Further reduced size for mobile */
+                height: 45px;
+                /* Further reduced size for mobile */
+                /* margin-bottom: 1rem !important; */
+                right: 4% !important;
+                bottom: 5rem;
+            }
 
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 337px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 5% !important;
-    bottom: 5rem;
-}
+            .call-button .images {
+                width: 30px !important;
+                height: 20px !important;
+            }
+        }
 
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
-@media (max-width: 330px) {
-.call-button {
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width: 45px; /* Further reduced size for mobile */
-    height: 45px; /* Further reduced size for mobile */
-    /* margin-bottom: 1rem !important; */
-    right: 6.5% !important;
-    bottom: 5rem;
-}
+        @media (max-width: 424px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 45px;
+                /* Further reduced size for mobile */
+                height: 45px;
+                /* Further reduced size for mobile */
+                /* margin-bottom: 1rem !important; */
+                right: 5% !important;
+                bottom: 5rem;
+            }
 
-.call-button .images {
-    width: 30px !important;
-    height: 20px !important;
-}
-}
+            .call-button .images {
+                width: 30px !important;
+                height: 20px !important;
+            }
+        }
+
+        @media (max-width: 337px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 45px;
+                /* Further reduced size for mobile */
+                height: 45px;
+                /* Further reduced size for mobile */
+                /* margin-bottom: 1rem !important; */
+                right: 5% !important;
+                bottom: 5rem;
+            }
+
+            .call-button .images {
+                width: 30px !important;
+                height: 20px !important;
+            }
+        }
+
+        @media (max-width: 330px) {
+            .call-button {
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 45px;
+                /* Further reduced size for mobile */
+                height: 45px;
+                /* Further reduced size for mobile */
+                /* margin-bottom: 1rem !important; */
+                right: 6.5% !important;
+                bottom: 5rem;
+            }
+
+            .call-button .images {
+                width: 30px !important;
+                height: 20px !important;
+            }
+        }
     </style>
 </head>
 
@@ -1791,7 +1817,7 @@ height: auto; /* Maintain aspect ratio */
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo">
+          <a href="index.html">  <img src="Vfine_Img/logo/vfine logo.png" alt="Vfine Logo"></a>
         </div>
         <div class="nav-links" id="navLinks">
             <a href="index.html" class="active">Home</a>
@@ -1855,28 +1881,29 @@ height: auto; /* Maintain aspect ratio */
 
                 <a href="conditioners.html">
                     <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="Vfine_Img/Conditioner/Conditioner Green tea and aloevera.png" alt="Conditioner">
+                        <img src="Vfine_Img/Conditioner/Conditioner Green tea and aloevera - Category.png"
+                            alt="Conditioner">
                         <div class="category-label">Conditioner</div>
                     </div>
                 </a>
 
                 <a href="hairoil.html">
                     <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="Vfine_Img/Hair Oil/Ayurvedic Hair Oil.png" alt="Hair Oil">
+                        <img src="Vfine_Img/Hair Oil/Ayurvedic Hair Oil - Category.png" alt="Hair Oil">
                         <div class="category-label">Hair Oil</div>
                     </div>
                 </a>
 
                 <a href="facewash.html">
                     <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="Vfine_Img/Facewash/Facewash Activated Charcoal.png" alt="Facewash">
+                        <img src="Vfine_Img/Facewash/Facewash Activated Charcoal - Category.png" alt="Facewash">
                         <div class="category-label">Facewash</div>
                     </div>
                 </a>
 
                 <a href="shampoo.html">
                     <div class="category-card" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="Vfine_Img/Shampoo/Ayurvedic Hair Shampoo.png" alt="Shampoo">
+                        <img src="Vfine_Img/Shampoo/Ayurvedic Hair Shampoo - Category.png" alt="Shampoo">
                         <div class="category-label">Shampoo</div>
                     </div>
                 </a>
@@ -1888,6 +1915,19 @@ height: auto; /* Maintain aspect ratio */
                     </div>
                 </a>
 
+                <a href="skincare.html">
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="Vfine_Img/Skin Care/Moisturizer - Category.png" alt="Skin Care">
+                        <div class="category-label">Skin Care</div>
+                    </div>
+                </a>
+
+                <a href="aushadi.html">
+                    <div class="category-card" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="Vfine_Img/Ausadhi/Ortho Relief Oil - Category.png" alt="Aushadi">
+                        <div class="category-label">Aushadi</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -2018,10 +2058,13 @@ height: auto; /* Maintain aspect ratio */
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-                <a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a>
-                <a href="products.html"><i class="fas fa-chevron-right"></i> Products</a>
-                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+                <a href="soap.html"><i class="fas fa-chevron-right"></i>Soaps</a>
+                <a href="aushadi.html"><i class="fas fa-chevron-right"></i>Aushadi</a>
+                <a href="hairoil.html"><i class="fas fa-chevron-right"></i>Hair Oil</a>
+                <a href="conditioners.html"><i class="fas fa-chevron-right"></i>Conditioner</a>
+                <a href="skincare.html"><i class="fas fa-chevron-right"></i>Skin Care</a>
+                <a href="facewash.html"><i class="fas fa-chevron-right"></i>Facewash</a>
+                <a href="shampoo.html"><i class="fas fa-chevron-right"></i>Shampoo</a>
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
